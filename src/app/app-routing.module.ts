@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
+import { SessionCheckGuardGuard } from './guards/session-check-guard.guard';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { DashboardLayoutComponent } from './layouts/dashboard-layout/dashboard-layout.component';
 import { WebsiteLayoutComponent } from './layouts/website-layout/website-layout.component';
@@ -25,7 +26,8 @@ const routes: Routes = [
         path: '',
         loadChildren: () => import("./modules/auth-module/auth-module.module").then((m) => m.AuthModuleModule)
       }
-    ]
+    ],
+    canActivate: [SessionCheckGuardGuard]
   },
 
   {

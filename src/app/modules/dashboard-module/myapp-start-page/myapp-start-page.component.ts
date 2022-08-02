@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyappStartPageComponent implements OnInit {
 
+  userName!: any;
   constructor() { }
 
   ngOnInit(): void {
+    this.userName = sessionStorage.getItem("user");
   }
 
 }

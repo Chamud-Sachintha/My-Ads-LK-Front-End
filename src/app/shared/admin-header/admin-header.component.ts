@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-admin-header',
@@ -12,21 +13,21 @@ export class AdminHeaderComponent implements OnInit {
   constructor(private route: Router) { }
 
   ngOnInit(): void {
-    // "use strict";
+    "use strict";
 
-    // var fullHeight = function () {
+    var fullHeight = function () {
 
-    //   $('.js-fullheight').css('height', $(window).height());
-    //   $(window).resize(function () {
-    //     $('.js-fullheight').css('height', $(window).height());
-    //   });
+      $('.js-fullheight').css('height', Number($(window).height()));
+      $(window).resize(function () {
+        $('.js-fullheight').css('height', Number($(window).height()));
+      });
 
-    // };
-    // fullHeight();
+    };
+    fullHeight();
 
-    // $('#sidebarCollapse').on('click', function () {
-    //   $('#sidebar').toggleClass('active');
-    // });
+    $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').toggleClass('active');
+    });
 
     this.userName = sessionStorage.getItem("user") ? sessionStorage.getItem("user") : "";
   }
