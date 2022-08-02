@@ -1,0 +1,53 @@
+<div class="container">
+    <h1 class="display-4 mt-3">Search Item Whatever You Want</h1>
+    <div class="jumbotron d-none d-lg-block d-md-block">
+        <div class="row ms-4">
+            <div class="col-4">
+                <mat-form-field style="width: 300px;">
+                    <mat-label>Type Category Name Do you Want to Search</mat-label>
+                    <input type="text" matInput placeholder="Eelectronics">
+                </mat-form-field>
+            </div>
+    
+            <div class="col-4">
+                <mat-form-field style="width: 300px;">
+                    <mat-label>Or else Type Item Name That you want to Buy</mat-label>
+                    <input type="text" matInput placeholder="Eelectronics">
+                </mat-form-field>
+            </div>
+
+            <div class="col">
+                <button mat-raised-button color="primary" style="margin-right: 20px;">Search Item</button>
+                <button mat-raised-button color="accent">See Popular Categories</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron d-lg-none d-md-none">
+        <div class="row ms-1">
+            <div class="col-12">
+                <mat-form-field style="width: 280px;">
+                    <mat-label>Type Category Name Do you Want to Search</mat-label>
+                    <input type="text" matInput placeholder="Eelectronics">
+                </mat-form-field>
+            </div>
+
+            <div class="col-12">
+                <mat-form-field style="width: 280px;">
+                    <mat-label>Or else Type Item Name That you want to Buy</mat-label>
+                    <input type="text" matInput placeholder="Eelectronics">
+                </mat-form-field>
+            </div>
+
+            <div class="col-12">
+                <button mat-raised-button color="primary" style="margin-right: 20px; width: 280px;">Search Item</button>
+            </div>
+
+            <div class="col-12 mt-3">
+                <button mat-raised-button color="accent" style="width: 280px;">Search Item</button>
+            </div>
+        </div>
+    </div>
+
+    <app-show-filter-ads></app-show-filter-ads>
+</div>

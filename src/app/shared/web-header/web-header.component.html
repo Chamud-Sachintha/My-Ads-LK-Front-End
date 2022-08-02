@@ -1,0 +1,51 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#" >Top Ads.LK</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links class="ms-5">
+  
+      <!-- Links -->
+      <div class="flex spacer"></div>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link waves-light" mdbWavesEffect routerLink="/" routerLinkActive="active">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link waves-light" routerLink="/find-ads" routerLinkActive="active" mdbWavesEffect>Find Ads</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
+        </li>
+  
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            Basic dropdown<span class="caret"></span>
+          </a>
+          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+            <div class="divider dropdown-divider"></div>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+          </div>
+        </li>
+        <div style="margin-left: 30px;"></div>
+        <li class="nav-item d-none d-lg-block d-md-block">
+          <a class="nav-link waves-light" mdbWavesEffect>|<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item d-md-none d-lg-none" routerLinkActive="active">
+          <a class="nav-link waves-light"  mdbWavesEffect routerLink="/auth/sign-in">Sign In<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ms-3 d-none d-md-block d-lg-block" routerLinkActive="active">
+          <a class="nav-link waves-light" mdbWavesEffect routerLink="/auth/sign-in">Sign In<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <!-- Links -->
+    </links>
+    <!-- Collapsible content -->
+  </mdb-navbar>
+  <!--/.Navbar-->

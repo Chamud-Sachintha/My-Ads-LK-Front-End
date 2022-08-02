@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row d-flex justify-content-center" style="margin-top: 3%;">
+        <div class="jumbotron text-center" style="width: 400px;">
+            <div class="col-12">
+                <span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: xx-large; color: blueviolet;">- Sign Up -</span><br>
+                <p class="mt-3"><em>This line rendered as italicized text.</em></p>
+                <form action="" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col-6">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>First Name</mat-label>
+                                <input matInput placeholder="Nimal" formControlName="firstName">
+                                <mat-icon matSuffix>verified_user</mat-icon>
+                            </mat-form-field>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['firstName'].touched && registrationForm.controls['firstName'].hasError('required')">First Name Is Required.</mat-error>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['firstName'].touched && registrationForm.controls['firstName'].hasError('pattern')">Please Enter Valid Name.</mat-error>
+                        </div>
+
+                        <div class="col-6">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Last Name</mat-label>
+                                <input matInput placeholder="Perera" formControlName="lastName">
+                                <mat-icon matSuffix>verified_user</mat-icon>
+                            </mat-form-field>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['lastName'].touched && registrationForm.controls['lastName'].hasError('required')">Last Name is Required.</mat-error>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['lastName'].touched && registrationForm.controls['lastName'].hasError('pattern')">Please Enter Valid Name.</mat-error>
+                        </div>
+
+                        <div class="col-12">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Email Address</mat-label>
+                                <input matInput placeholder="nimal123@gmail.com" formControlName="emailAddress">
+                                <mat-icon matSuffix>email</mat-icon>
+                            </mat-form-field>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['emailAddress'].touched && registrationForm.controls['emailAddress'].hasError('required')">Email Address is Required.</mat-error>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['emailAddress'].touched && registrationForm.controls['emailAddress'].hasError('email')">Please Enter Valid Email.</mat-error>
+                        </div>
+
+                        <div class="col-12">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Create Password</mat-label>
+                                <input type="password" matInput placeholder="********" formControlName="userPass">
+                                <mat-icon matSuffix>password</mat-icon>
+                            </mat-form-field>
+                            <mat-error  style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['userPass'].touched && registrationForm.controls['userPass'].hasError('required')">Password is Required.</mat-error>
+                            <mat-error  style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['userPass'].touched && registrationForm.controls['userPass'].hasError('minlength')">Password Should Be More Than 8 Characters</mat-error>
+                        </div>
+
+                        <div class="col-12">
+                            <mat-form-field appearance="outline" style="width: 100%;">
+                                <mat-label>Confirm Password</mat-label>
+                                <input type="password" matInput placeholder="********" formControlName="repeatPassword">
+                                <mat-icon matSuffix>repeat</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="col mt-2">
+                            <button mat-raised-button color="primary" class="mb-3" [disabled]="registrationForm.invalid">Register</button><br>
+                            <a href="" routerLink="/auth/sign-in">Already Have an Account ?</a><br>
+                            <em><a href="" routerLink="/">Back to the Home.</a></em>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+.slider-wrap{
+    position: relative;
+}
+
+.slider-main{
+    position: absolute;
+    width: 200px;
+}
