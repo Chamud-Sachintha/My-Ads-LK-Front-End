@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CreateAdPostComponent } from './create-ad-post/create-ad-post.component';
 import { MyappManageAdsComponent } from './myapp-manage-ads/myapp-manage-ads.component';
 import { MyappStartPageComponent } from './myapp-start-page/myapp-start-page.component';
 
@@ -19,6 +20,10 @@ const routes: Routes = [
       {
         path: 'my-ads',
         component: MyappManageAdsComponent
+      },
+      {
+        path: 'create-ad',
+        component: CreateAdPostComponent
       }
     ]
   }
