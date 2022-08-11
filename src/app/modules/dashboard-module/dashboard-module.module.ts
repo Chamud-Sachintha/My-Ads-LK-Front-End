@@ -18,6 +18,9 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
+import { ReferelActivitiesComponent } from './referel-activities/referel-activities.component';
+import { MyRequestsComponent } from './my-requests/my-requests.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { MatSliderModule } from '@angular/material/slider';
     MyappManageAdsComponent,
     CreateAdPostComponent,
     SeelAllAdsComponent,
-    AdvanceSearchComponent
+    AdvanceSearchComponent,
+    ReferelActivitiesComponent,
+    MyRequestsComponent,
+    MyOrdersComponent
   ],
   imports: [
     CommonModule,
