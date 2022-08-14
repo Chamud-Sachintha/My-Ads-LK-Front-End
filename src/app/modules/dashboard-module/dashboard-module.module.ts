@@ -21,6 +21,9 @@ import { MatSliderModule } from '@angular/material/slider';
 import { ReferelActivitiesComponent } from './referel-activities/referel-activities.component';
 import { MyRequestsComponent } from './my-requests/my-requests.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { FavoritesComponent } from './favorites/favorites.component';
+import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+import { AdminSupportComponent } from './admin-support/admin-support.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
     AdvanceSearchComponent,
     ReferelActivitiesComponent,
     MyRequestsComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+    FavoritesComponent,
+    ProfileSettingsComponent,
+    AdminSupportComponent
   ],
   imports: [
     CommonModule,
